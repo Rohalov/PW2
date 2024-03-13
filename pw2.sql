@@ -42,7 +42,7 @@ CREATE TABLE [dbo].[Teachers](
 GO
 
 CREATE TABLE [dbo].[Grades](
-	[Id] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[StudentId] [int] IDENTITY(1,1) NOT NULL,
 	[SubjectId] [int] NOT NULL,
 	[Date] [datetime] NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE [dbo].[Grades](
 GO
 
 CREATE TABLE [dbo].[Schedule](
-	[Id] [int] NOT NULL,
+	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[SubjectId] [int] NOT NULL,
 	[TeacherId] [int] NOT NULL,
 	[Weekday] [nchar](10) NOT NULL,
